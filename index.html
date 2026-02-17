@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تهنئة رمضان - محمد شعراني ابو جاسم</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        royal: {
+                            green: '#1B4332',
+                            gold: '#D4AF37',
+                            cream: '#FDFBF7',
+                            dark: '#0f221a'
+                        }
+                    },
+                    fontFamily: {
+                        amiri: ['Amiri', 'serif'],
+                        ruqaa: ['Aref Ruqaa', 'serif'],
+                        naskh: ['Noto Naskh Arabic', 'serif'],
+                    },
+                    animation: {
+                        'swing': 'swing 3s ease-in-out infinite alternate',
+                        'fade-up': 'fadeUp 1.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        swing: {
+                            '0%': { transform: 'rotate(5deg)' },
+                            '100%': { transform: 'rotate(-5deg)' },
+                        },
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FDFBF7;
+            background-image: radial-gradient(#D4AF37 0.5px, transparent 0.5px), radial-gradient(#D4AF37 0.5px, #FDFBF7 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+
+        .border-pattern {
+            border: 2px solid #D4AF37;
+            position: relative;
+        }
+        
+        .border-pattern::before {
+            content: "";
+            position: absolute;
+            top: -6px; left: -6px; right: -6px; bottom: -6px;
+            border: 2px solid #1B4332;
+            z-index: -1;
+        }
+
+        .border-corner {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 3px solid #D4AF37;
+            z-index: 10;
+        }
+        
+        .tl { top: -10px; left: -10px; border-right: none; border-bottom: none; }
+        .tr { top: -10px; right: -10px; border-left: none; border-bottom: none; }
+        .bl { bottom: -10px; left: -10px; border-right: none; border-top: none; }
+        .br { bottom: -10px; right: -10px; border-left: none; border-top: none; }
+
+        .calligraphy-text {
+            text-shadow: 2px 2px 0px rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <!-- Card Container -->
+    <div class="bg-white w-full max-w-md p-2 shadow-2xl relative animate-fade-up">
+        
+        <!-- Inner Border Frame -->
+        <div class="border-pattern h-full p-6 flex flex-col items-center justify-center text-center relative bg-white">
+            
+            <!-- Corner Ornaments -->
+            <div class="border-corner tl"></div>
+            <div class="border-corner tr"></div>
+            <div class="border-corner bl"></div>
+            <div class="border-corner br"></div>
+
+            <!-- Hanging Lantern (Top Center) -->
+            <div class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-20 flex flex-col items-center animate-swing origin-top z-20">
+                <div class="h-16 w-0.5 bg-royal-gold"></div>
+                <div class="text-royal-gold text-5xl drop-shadow-md">
+                    <i class="fas fa-fanoos"></i> <!-- FontAwesome doesn't have fanoos, using generic lamp/custom SVG usually better, but sticking to solid icons -->
+                    <svg class="w-16 h-16 fill-current text-royal-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Custom Lantern SVG Path -->
+                        <path d="M256 32C203 32 160 75 160 128V160H128V192H160V224H128V256H160V416H192V480H320V416H352V256H384V224H352V192H384V160H352V128C352 75 309 32 256 32zM224 448H288V416H224V448zM224 64H288V96H224V64z"/> 
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Top Decorative Motif -->
+            <div class="mt-12 mb-4 text-royal-green text-opacity-80">
+                <i class="fas fa-star-of-life fa-spin-pulse" style="animation-duration: 10s;"></i>
+            </div>
+
+            <!-- Greeting -->
+            <h4 class="text-royal-gold font-naskh text-lg mb-2">تهنئة خاصة بمناسبة الشهر الفضيل</h4>
+            
+            <h1 class="text-6xl font-ruqaa text-royal-green mb-2 calligraphy-text py-4 leading-normal">
+                رمضان<br>مبارك
+            </h1>
+            
+            <p class="text-gray-600 font-amiri text-lg leading-8 px-2 mb-6">
+                أعاده الله علينا وعليكم بالخير واليمن والبركات، وتقبل الله منا ومنكم الصيام والقيام وصالح الأعمال.
+            </p>
+
+            <!-- Sender Name Block -->
+            <div class="w-full border-t border-b border-royal-gold border-double py-4 my-4 bg-royal-cream bg-opacity-50">
+                <p class="text-sm text-gray-500 font-naskh mb-1">مع أطيب التحيات</p>
+                <h2 class="text-2xl md:text-3xl font-ruqaa text-royal-green font-bold">
+                    محمد شعراني ابو جاسم
+                </h2>
+            </div>
+
+            <!-- Action Buttons (Subtle Style) -->
+            <div class="flex flex-col sm:flex-row w-full gap-3 mt-4">
+                <button onclick="shareGreeting()" class="flex-1 bg-royal-green text-white py-2 px-4 rounded hover:bg-royal-dark transition duration-300 font-amiri shadow-md flex justify-center items-center gap-2">
+                    <i class="fab fa-whatsapp"></i> <span>مشاركة التهنئة</span>
+                </button>
+            </div>
+
+            <!-- Credits -->
+            <div class="absolute bottom-1 right-2">
+                <p class="text-[10px] text-gray-400 font-naskh">من إعداد وتصميم: قيس جازي</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const greetingText = "رمضان مبارك! \nأعاده الله علينا وعليكم بالخير والبركات.\n\nأخوكم: محمد شعراني ابو جاسم";
+
+        function shareGreeting() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'رمضان كريم',
+                    text: greetingText,
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                const url = `https://wa.me/?text=${encodeURIComponent(greetingText)}`;
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+</body>
+</html>
+
